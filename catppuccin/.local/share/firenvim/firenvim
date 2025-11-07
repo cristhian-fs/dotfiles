@@ -1,0 +1,31 @@
+#!/bin/sh
+mkdir -p /run/user/1000/firenvim
+chmod 700 /run/user/1000/firenvim
+cd /run/user/1000/firenvim
+export PATH="$PATH:/home/cristhian/.spicetify:/home/cristhian/.bun/bin:/home/cristhian/.spicetify:/home/cristhian/.nvm/versions/node/v25.0.0/bin:/home/cristhian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux-x86_64/bin"
+unset NVIM_LISTEN_ADDRESS
+if [ -n "$VIM" ] && [ ! -d "$VIM" ]; then
+  unset VIM
+fi
+if [ -n "$VIMRUNTIME" ] && [ ! -d "$VIMRUNTIME" ]; then
+  unset VIMRUNTIME
+fi
+if [ ! -n "$XDG_DATA_DIRS" ]; then
+  XDG_DATA_DIRS='/usr/share/i3:/home/cristhian/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'
+  export XDG_DATA_DIRS
+fi
+if [ ! -n "$XDG_CONFIG_DIRS" ]; then
+  XDG_CONFIG_DIRS='/etc/xdg/xdg-i3:/etc/xdg'
+  export XDG_CONFIG_DIRS
+fi
+if [ ! -n "$XDG_RUNTIME_DIR" ]; then
+  XDG_RUNTIME_DIR='/run/user/1000'
+  export XDG_RUNTIME_DIR
+fi
+if command -v nvim >/dev/null 2>/dev/null; then
+  FIRENVIM_NVIM_BINARY=nvim
+else
+  FIRENVIM_NVIM_BINARY=/opt/nvim-linux-x86_64/bin/nvim
+fi
+
+exec "$FIRENVIM_NVIM_BINARY" --headless --cmd "let g:firenvim_config={'globalSettings':{},'localSettings':{'.*':{}}}|let g:firenvim_i=[]|let g:firenvim_o=[]|let g:Firenvim_oi={i,d,e->add(g:firenvim_i,d)}|let g:Firenvim_oo={t->[chansend(2,t)]+add(g:firenvim_o,t)}|let g:firenvim_c=stdioopen({'on_stdin':{i,d,e->g:Firenvim_oi(i,d,e)},'on_print':{t->g:Firenvim_oo(t)}})" --cmd 'let g:started_by_firenvim = v:true' -c 'try|call firenvim#run()|catch /Unknown function/|call chansend(g:firenvim_c,["f\n\n\n"..json_encode({"messages":["Your plugin manager did not load the Firenvim plugin for Neovim."],"version":"0.0.0"})])|call chansend(2,["Firenvim not in runtime path. &rtp="..&rtp])|qall!|catch|call chansend(g:firenvim_c,["l\n\n\n"..json_encode({"messages": ["Something went wrong when running firenvim. See troubleshooting guide."],"version":"0.0.0"})])|call chansend(2,[v:exception])|qall!|endtry'
