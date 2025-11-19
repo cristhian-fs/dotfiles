@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# MATA QUALQUER POLYBAR RODANDO
+polybar-msg cmd quit >/dev/null 2>&1
+# ou, se preferir o modo bruto:
+# killall -q polybar
+
+# PEQUENO DELAY PRA EVITAR BUGS
+sleep 0.5
+
+# DEFINA SUAS BARRAS
+BARS=("left" "music" "center" "right")
+
+if type "xrandr" >/dev/null; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    for BAR in "${BARS[@]}"; do
+      MONITOR=$mon polybar -r "$BAR" &
+    done
+  done
+else
+  for BAR in "${BARS[@]}"; do
+    polybar -r "$BAR" &
+  done
+fi

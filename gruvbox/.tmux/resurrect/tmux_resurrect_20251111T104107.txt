@@ -1,0 +1,9 @@
+pane	0	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	1	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	dev-study	0	1	:*	0	nvim . ~/D/d/s/n/rocketseat-api-solid	:/home/cris/Documents/dev/study/node/rocketseat-api-solid	1	nvim	:nvim .
+nvim .
+pane	dev-study	0	1	:*	1	~/D/d/s/n/rocketseat-api-solid	:/home/cris/Documents/dev/study/node/rocketseat-api-solid	0	fish	:
+window	0	0	:fish	1	:*	ce9e,208x48,0,0,1	:
+window	1	0	:fish	1	:*	ce9f,208x48,0,0,2	:
+window	dev-study	0	:nvim	1	:*	3ba3,208x48,0,0{143x48,0,0,3,64x48,144,0,4}	:
+state	dev-study	

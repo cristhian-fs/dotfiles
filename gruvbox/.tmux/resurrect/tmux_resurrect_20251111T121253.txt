@@ -1,0 +1,14 @@
+pane	0	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	1	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	config	0	1	:*	0	nvim ~ ~	:/home/cris	1	nvim	:nvim /home/cris
+pane	dev-study	0	1	:*	0	nvim . ~/D/d/s/n/rocketseat-api-solid	:/home/cris/Documents/dev/study/node/rocketseat-api-solid	1	nvim	:nvim .
+nvim .
+pane	dev-study	0	1	:*	1	~/D/d/s/n/rocketseat-api-solid	:/home/cris/Documents/dev/study/node/rocketseat-api-solid	0	fish	:
+pane	whatsapp-analytics	0	1	:*	0	nvim . ~/D/d/j/whatsapp-analytics	:/home/cris/Documents/dev/joel/whatsapp-analytics	1	nvim	:nvim .
+pane	whatsapp-analytics	0	1	:*	1	pnpm run dev ~/D/d/j/whatsapp-analytics	:/home/cris/Documents/dev/joel/whatsapp-analytics	0	node	:node /home/cris/.nvm/versions/node/v24.11.0/bin/pnpm run dev
+window	0	0	:fish	1	:*	ce9e,208x48,0,0,1	:
+window	1	0	:fish	1	:*	ce9f,208x48,0,0,2	:
+window	config	0	:nvim	1	:*	cea2,208x48,0,0,5	:
+window	dev-study	0	:nvim	1	:*	3ba3,208x48,0,0{143x48,0,0,3,64x48,144,0,4}	:
+window	whatsapp-analytics	0	:nvim	1	:*	c49a,208x48,0,0{144x48,0,0,6,63x48,145,0,7}	:
+state	whatsapp-analytics	

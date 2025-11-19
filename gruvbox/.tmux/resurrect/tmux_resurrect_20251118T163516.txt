@@ -1,0 +1,18 @@
+pane	0	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	1	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	config	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	dev-study	0	1	:*	0	nvim . ~/D/d/s/n/rocketseat-api-solid	:/home/cris/Documents/dev/study/node/rocketseat-api-solid	1	nvim	:nvim .
+pane	dev-study	0	1	:*	1	pnpm run test:watch ~/D/d/s/n/rocketseat-api-solid	:/home/cris/Documents/dev/study/node/rocketseat-api-solid	0	node	:node /home/cris/.nvm/versions/node/v24.11.0/bin/pnpm run test:watch
+pane	postgres-study	0	0	:-	0	~/D/d/s/p/mastering-postgres	:/home/cris/Documents/dev/study/postgres/mastering-postgres	1	fish	:
+pane	postgres-study	0	0	:-	1	~/D/d/s/p/mastering-postgres	:/home/cris/Documents/dev/study/postgres/mastering-postgres	0	fish	:
+pane	postgres-study	1	1	:*	0	nvim . ~/D/d/d/personal	:/home/cris/Documents/dev/dev-notes/personal	1	nvim	:nvim .
+pane	whatsapp-analytics	0	1	:*	0	nvim . ~/D/d/j/whatsapp-analytics	:/home/cris/Documents/dev/joel/whatsapp-analytics	1	nvim	:nvim .
+pane	whatsapp-analytics	0	1	:*	1	~/D/d/j/whatsapp-analytics	:/home/cris/Documents/dev/joel/whatsapp-analytics	0	fish	:
+window	0	0	:fish	1	:*	d35e,234x59,0,0,1	:
+window	1	0	:fish	1	:*	d35f,234x59,0,0,2	:
+window	config	0	:fish	1	:*	d360,234x59,0,0,3	:
+window	dev-study	0	:nvim	1	:*	5d3e,234x60,0,0{167x60,0,0,4,66x60,168,0,5}	:
+window	postgres-study	0	:fish	0	:-	a646,234x58,0,0{117x58,0,0,8,116x58,118,0,10}	:
+window	postgres-study	1	:nvim	1	:*	67e1,234x58,0,0,12	:
+window	whatsapp-analytics	0	:nvim	1	:*	1893,234x58,0,0{157x58,0,0,6,76x58,158,0,7}	:
+state	dev-study	

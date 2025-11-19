@@ -1,0 +1,5 @@
+pane	0	0	1	:*	0	~	:/home/cris	1	fish	:
+pane	1	0	1	:*	0	~	:/home/cris	1	fish	:
+window	0	0	:fish	1	:*	ce9d,208x48,0,0,0	:
+window	1	0	:fish	1	:*	ce9e,208x48,0,0,1	:
+state	1	

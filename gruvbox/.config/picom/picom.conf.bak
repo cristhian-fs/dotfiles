@@ -1,0 +1,51 @@
+########################################
+#    PICOM CONFIG - NVIDIA optimized   #
+########################################
+
+backend = "glx";
+vsync = true;
+glx-no-stencil = true;
+use-damage = true;
+unredir-if-possible = true;
+unredir-if-possible-delay = 100;
+
+detect-client-leader = true;
+detect-transient = true;
+detect-rounded-corners = true;
+
+# Transparência leve
+inactive-opacity = 0.92;
+active-opacity = 1.0;
+frame-opacity = 1.0;
+
+# Evitar tearing e lag
+use-ewmh-active-win = true;
+glx-swap-method = 2;
+xrender-sync-fence = true;
+
+# Sombras suaves (pouco custo)
+shadow = true;
+shadow-radius = 10;
+shadow-offset-x = -8;
+shadow-offset-y = -8;
+shadow-opacity = 0.35;
+shadow-exclude = [ "class_g = 'Polybar'" ];
+
+# Fading leve
+fading = true;
+fade-in-step = 0.05;
+fade-out-step = 0.05;
+
+# Evita lag em fullscreen e vídeos
+# unredir-if-possible = true;
+unredir-if-possible-exclude = [ ];
+
+# Desativa blur (pesadíssimo na NVIDIA)
+blur-method = "none";
+
+# Excluir dock/panel
+wintypes:
+{
+  dock = { shadow = false; };
+  desktop = { shadow = false; };
+};
